@@ -133,14 +133,15 @@ h1, h2, h3, h4 {
 }
 
 /* Define the specific image for each card (paths must exist) */
+/* Update your CSS in style.css */
 .projects-container .project-card:nth-child(1) {
-    background-image: url('images\project.png');
+background-image: url('images/project-placeholder.jpg');
 }
 .projects-container .project-card:nth-child(2) {
-    background-image: url('images\Screenshot 2025-12-11 223130.png');
+ background-image: url('images/project-placeholder.jpg');
 }
 .projects-container .project-card:nth-child(3) {
-    background-image: url('images\Screenshot 2025-12-11 223130.png');
+  background-image: url('images/project-placeholder.jpg');
 }
 
 /* Overlay for Readability (Ensures white text is readable) */
