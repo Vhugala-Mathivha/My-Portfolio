@@ -2,16 +2,18 @@
 
 /* --- 0. Global & Utility Styles --- */
 body {
-    background-color: #003153; /* GLOBAL CHANGE: Prussian Blue Background */
+    background-color: #003153; /* Solid Prussian Blue */
     color: #ccc; /* Light Gray Text Color */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    min-height: 100vh;
+    padding-top: 50px; /* ESSENTIAL: Adds space for the fixed navigation bar */
 }
 
 /* Centralizing content for readability on wide screens */
-.profile-container, .projects-container, .education-container, .contact-container {
+.profile-container, .projects-container, .skills-container, .education-container, .contact-container {
     max-width: 1100px;
     margin: 40px auto;
     padding: 20px;
@@ -24,7 +26,7 @@ h1, h2, h3, h4 {
 
 /* --- 1. PROFILE CONTAINER (Header) --- */
 .profile-container {
-    border-bottom: 2px solid #335d7f; /* Light blue separator line for dark background */
+    border-bottom: 2px solid #335d7f; 
     display: flex; 
     justify-content: space-between;
     align-items: center;
@@ -46,19 +48,20 @@ h1, h2, h3, h4 {
     height: 250px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #3498db; /* Accent color border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjusted for dark mode visibility */
+    border: 5px solid #3498db; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 
 /* --- 2. CERTIFICATIONS CONTAINER (The Sliding Section) --- */
 .certifications-section {
     height: 3cm; 
     overflow: hidden; 
-    background-color: #003153; /* Using the main background color */
+    background-color: #003153; 
     padding: 10px 0px;
     margin: 20px 0;
     white-space: nowrap; 
     
+
 }
 
 .certifications-slider {
@@ -73,9 +76,9 @@ h1, h2, h3, h4 {
     object-fit: contain;
     margin-right: 30px; 
     vertical-align: middle; 
-     /* Light shadow for dark mode */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15); 
     border-radius: 4px; 
-    border: 1px solid #335d7f; /* Subtle border to define edges on dark background */
+    border: 1px solid #335d7f; 
 }
 
 /* CSS Keyframes for the Animation (No change needed) */
@@ -90,11 +93,21 @@ h1, h2, h3, h4 {
 
 
 /* --- 3. PROJECTS CONTAINER (Cards with Background Images) --- */
+/* Fix: Force H2 onto its own line and center it */
+.projects-container h2 {
+    width: 100%; /* Important: Forces the H2 to take a full row */
+    text-align: center; /* Centers the text */
+    margin-bottom: 30px; /* Space between title and cards */
+    color: #3498db; /* Accent blue for the title */
+    margin-top: 0;
+}
+
 .projects-container {
     display: flex;
     justify-content: space-between;
     gap: 30px;
     padding-bottom: 40px;
+    flex-wrap: wrap; /* Allows the H2 and the cards to wrap to separate rows */
 }
 
 .project-card {
@@ -118,13 +131,13 @@ h1, h2, h3, h4 {
 
 /* Define the specific image for each card (paths must exist) */
 .projects-container .project-card:nth-child(1) {
-    background-image: url('images/project1.jpg');
+    background-image: url('images\project.png');
 }
 .projects-container .project-card:nth-child(2) {
-    background-image: url('images/project2.jpg');
+    background-image: url('images\Screenshot 2025-12-11 223130.png');
 }
 .projects-container .project-card:nth-child(3) {
-    background-image: url('images/project3.jpg');
+    background-image: url('images\Screenshot 2025-12-11 223130.png');
 }
 
 /* Overlay for Readability (Ensures white text is readable) */
@@ -177,8 +190,79 @@ h1, h2, h3, h4 {
     background-color: #2980b9;
 }
 
+/* --- 3.5. SKILLS & TOOLS CONTAINER (NEW) --- */
+.skills-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #335d7f; 
+    padding-top: 40px;
+    /* Styles for the grid of skill-groups */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 2px solid #335d7f;
+}
+
+.skills-container h2 {
+    width: 100%; /* Force H2 to take a full row */
+    margin-bottom: 30px;
+    color: #3498db;
+}
+
+.skill-group {
+    background-color: white; /* Slightly lighter dark blue */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    flex: 1 1 250px; /* Allows groups to flex but keeps a min width of 250px */
+    min-width: 200px;
+    text-align: center;
+}
+
+.skill-group h3 {
+    color: #3498db;
+    margin-top: 0;
+    border-bottom: 1px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Container for the logos to manage their alignment */
+.icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Styling for the skill logo images */
+.skill-icon {
+    height: 60px; /* Standardized size for all icons */
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1); /* Slight hover effect */
+}
+
+.skill-group p {
+    color: #a7a5a5;
+    line-height: 1.4;
+    font-size: 0.95em;
+    margin: 5px 0; /* Adjust margin for text concepts */
+}
+
 
 /* --- 4. EDUCATION CONTAINER (Timeline) --- */
+/* ==================================== */
+/* 5. EDUCATION TIMELINE STYLES (Adjusted for Alignment) */
+/* ==================================== */
+
 .education-container {
     max-width: 1100px;
     margin: 40px auto;
@@ -193,7 +277,8 @@ h1, h2, h3, h4 {
 
 .timeline {
     position: relative;
-    padding-left: 30px; 
+    /* Increased padding-left to ensure content starts well clear of the line and dot */
+    padding-left: 55px; 
 }
 
 /* Vertical Timeline Line */
@@ -201,16 +286,19 @@ h1, h2, h3, h4 {
     content: '';
     position: absolute;
     top: 0;
-    left: 10px;
+    /* Line is now 20px from the far left of the container */
+    left: 20px; 
     width: 2px;
     height: 100%;
-    background: #335d7f; /* Line color is light blue */
+    background: #335d7f;
 }
 
 .timeline-item {
-    margin-bottom: 40px;
+    /* Main vertical spacing between items */
+    margin-bottom: 2px; 
     position: relative;
-    padding-left: 30px; 
+    /* Removed the extra padding-left that caused the overlap/misalignment */
+    padding-left: 0; 
 }
 
 /* Timeline Dot */
@@ -218,12 +306,13 @@ h1, h2, h3, h4 {
     content: '';
     position: absolute;
     top: 5px;
-    left: 0;
+    /* Calculated offset to center the 15px dot precisely on the 2px line at 20px */
+    left: -42.5px; 
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: #3498db; /* Blue accent color */
-    border: 3px solid #003153; /* Background ring to stand out */
+    background: #3498db;
+    border: 3px solid #003153;
     z-index: 1;
 }
 
@@ -231,7 +320,7 @@ h1, h2, h3, h4 {
     font-size: 0.9em;
     font-weight: bold;
     color: #ccc; /* Light gray for date */
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .timeline-content {
@@ -247,13 +336,12 @@ h1, h2, h3, h4 {
     font-size: 1.2em;
 }
 
-
 /* --- 5. CONTACT CONTAINER --- */
 .contact-container {
     text-align: center;
     padding: 40px 20px;
-    background-color: #003153; /* Use main background color */
-    border-top: 1px solid #335d7f; /* Light gray border */
+    background-color: #003153; 
+    border-top: 1px solid #335d7f; 
 }
 
 .contact-details p {
@@ -262,7 +350,7 @@ h1, h2, h3, h4 {
 }
 
 .contact-details a {
-    color: #3498db; /* Keep link color blue for visibility */
+    color: #3498db; 
     text-decoration: none;
 }
 
@@ -313,7 +401,7 @@ h1, h2, h3, h4 {
     border: none;
     cursor: pointer;
     font-size: 1.1em;
-    background-color: #3498db; /* Keep the accent blue */
+    background-color: #3498db; 
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -328,7 +416,7 @@ h1, h2, h3, h4 {
     text-align: center;
     margin-top: 15px;
     font-size: 1.2em;
-    color: #2ecc71; /* Success message color */
+    color: #2ecc71; 
 }
 
 
@@ -339,4 +427,96 @@ footer {
     font-size: 0.9em;
     color: #ccc;
     border-top: 1px solid #335d7f;
+}
+
+/* --- 8. NAVIGATION BAR STYLES (Fixed, Full Width, Light Blue) --- */
+#main-nav {
+    position: fixed; 
+    top: 0;          
+    left: 0;         
+    right: 0;        
+    z-index: 1000;   
+    background-color: #3498db; /* LIGHT BLUE BACKGROUND */
+    padding: 10px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); 
+    
+    /* FLEXBOX for spreading logo and links */
+    display: flex;
+    justify-content: space-between; /* Pushes the logo left and links right */
+    align-items: center; /* Vertically centers items */
+}
+
+.nav-logo {
+    color: white; /* Dark blue text for contrast */
+    font-size: 0.8em;
+    font-weight: 800; /* Extra bold for prominence */
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    /* Container for the right-aligned buttons */
+    display: flex;
+    gap: 10px;
+}
+
+#main-nav a {
+    color: #003153; /* Dark Blue text for high contrast on light blue background */
+    text-decoration: none;
+    padding: 8px 15px;
+    font-weight: 700; 
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 4px;
+}
+
+#main-nav a:hover {
+    color: white; /* Text turns white on hover */
+    background-color: #2980b9; /* Slightly darker blue on hover */
+}
+
+/* ==================================== */
+/* 4. ABOUT CONTAINER STYLES (Revised) */
+/* ==================================== */
+
+.about-container {
+    /* Ensures the section is centered and has a maximum readable width */
+    max-width: 1200px; 
+    margin: 40px auto;
+    padding: 0 20px 40px 20px; /* Padding for spacing, no background styles */
+    
+    /* Center aligns the inline-block h2 element */
+    text-align: center; 
+    border-bottom:1px solid #335d7f ;
+}
+
+.about-container h2 {
+    /* Styling for the section title */
+    font-size: 2.2rem;
+    color: #3498db; 
+    margin: 0 auto 25px auto; /* Centers the element and adds bottom margin */
+    padding-bottom: 10px;
+    
+    /* Creates a clean blue underline that only spans the text width */
+    display: inline-block;
+}
+
+.about-container p {
+    /* Styling for the content paragraph for optimal readability */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 15px;
+    
+    /* Overrides the parent's 'text-align: center' */
+    text-align: left; 
+    
+    /* Optional: Makes the content block narrower for better reading flow */
+    max-width: 900px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Optional: Emphasize the bolded skills and projects */
+.about-container p strong {
+    color: #007BFF; /* Highlighted color for key terms */
+    font-weight: 700;
 }
