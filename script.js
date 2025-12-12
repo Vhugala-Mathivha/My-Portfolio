@@ -7,6 +7,10 @@ function closeModal() {
 // Ensure the code runs only after the entire HTML document is loaded
 document.addEventListener('DOMContentLoaded', function() {
     
+    // FIX: Force scroll position to the top (0, 0) on page load 
+    // This resolves the issue of the page auto-scrolling to the bottom.
+    window.scrollTo(0, 0); 
+    
     const contactForm = document.getElementById('contactForm');
     const modal = document.getElementById('thankYouModal');
     const modalMessage = document.getElementById('modal-message');
