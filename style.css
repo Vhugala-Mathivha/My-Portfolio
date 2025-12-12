@@ -141,7 +141,7 @@ background-image: url('images/project-placeholder.jpg');
  background-image: url('images/project-placeholder.jpg');
 }
 .projects-container .project-card:nth-child(3) {
-  background-image: url('images/project-placeholder.jpg');
+ background-image: url('images/project-placeholder.jpg');
 }
 
 /* Overlay for Readability (Ensures white text is readable) */
@@ -178,13 +178,17 @@ background-image: url('images/project-placeholder.jpg');
     font-size: 0.95em;
 }
 
+#pro{
+    background-image: url('images/project-placeholder.jpg');
+}
+
 .view-project-tab {
     display: inline-block;
     background-color: #3498db;
-    color: white;
+    color: rgb(15, 15, 15);
     padding: 10px 20px;
-    margin-top: 15px;
-    margin-bottom: 20px; 
+    margin-top: 100px;
+    margin-bottom: 10px; 
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
