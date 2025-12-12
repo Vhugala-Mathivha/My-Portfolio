@@ -490,8 +490,14 @@ footer {
 
 .about-container h2 {
     /* Styling for the section title */
-    font-size: 2.2rem;
-    color: #3498db; 
+  width: 100%; /* Important: Forces the H2 to take a full row */
+    text-align: center; /* Centers the text */
+    margin-bottom: 30px; /* Space between title and cards */
+    color: #3498db; /* Accent blue for the title */
+    /*margin-top: 0;*/
+
+  /*  font-size: 2.2rem;*/
+   /* color: #3498db; */
     margin: 0 auto 25px auto; /* Centers the element and adds bottom margin */
     padding-bottom: 10px;
     
