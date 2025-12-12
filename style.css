@@ -1,5 +1,8 @@
 /* style.css */
-
+/* Enables smooth scrolling animation when jumping to anchored sections */
+html {
+    scroll-behavior: smooth;
+}
 /* --- 0. Global & Utility Styles --- */
 body {
     background-color: #003153; /* Solid Prussian Blue */
@@ -507,9 +510,9 @@ footer {
 
 .about-container p {
     /* Styling for the content paragraph for optimal readability */
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     line-height: 1.6;
-    color: white;
+    color: rgb(236, 234, 234);
     margin-bottom: 15px;
     
     /* Overrides the parent's 'text-align: center' */
@@ -525,4 +528,62 @@ footer {
 .about-container p strong {
     color: #007BFF; /* Highlighted color for key terms */
     font-weight: 700;
+}
+
+/* Styling for the success message */
+/* ==================================== */
+/* 7. MODAL/POP-UP STYLES */
+/* ==================================== */
+
+/* Full-screen dark overlay (the backdrop) */
+.modal-backdrop {
+    display: none; /* Starts hidden */
+    position: fixed; 
+    z-index: 1000; /* High z-index to ensure it sits on top of everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); /* Dark, semi-transparent background */
+    backdrop-filter: blur(5px); /* Optional: Adds a nice blur effect */
+}
+
+/* The centered box containing the message */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% top margin, auto left/right centers the box */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 450px; /* Max width for better readability */
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Styling for the close (x) button */
+.close-button {
+    color: #34277e;
+    float: right;
+    border-radius: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styling for the message text */
+#modal-message {
+    color: black;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 20px 0;
 }
