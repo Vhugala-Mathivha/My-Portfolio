@@ -98,7 +98,7 @@ export const Skills: React.FC = () => {
                 </div>
                 <div className="flex items-center justify-center flex-grow content-center">
                      <p className="text-gray-400 text-center font-medium leading-loose text-lg max-w-[90%]">
-                        Software Engineering, Operating Systems, Information Security
+                        Software Engineering, Operating Systems, Software Development Life Cycle(SDLC)
                      </p>
                 </div>
             </div>
