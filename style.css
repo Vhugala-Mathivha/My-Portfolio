@@ -135,7 +135,7 @@ h1, h2, h3, h4 {
 /* Define the specific image for each card (paths must exist) */
 /* Update your CSS in style.css */
 .projects-container .project-card:nth-child(1) {
-background-image: url('images/project-placeholder.jpg');
+background-image: url('images/wilmac.png');
 }
 .projects-container .project-card:nth-child(2) {
  background-image: url('images/project-placeholder.jpg');
@@ -179,7 +179,16 @@ background-image: url('images/project-placeholder.jpg');
 }
 
 #pro{
-    background-image: url('images/project-placeholder.jpg');
+    background-image: url('images/wilmac.png');
+}
+
+#one{
+background-image: url('images/wilmac.png');
+
+}
+
+#two{
+    background-image: url('images/wilmac.png');
 }
 
 .view-project-tab {
