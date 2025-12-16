@@ -10,9 +10,9 @@ interface Project {
 const projects: Project[] = [
   {
     id: 'one',
-    title: 'VM PROJECTS',
-    url: 'https://vm-projects.vercel.app/',
-    imageUrl: 'images/vm-projects.png'
+    title: 'LURE WEDDINGS',
+    url: 'https://lure-weddings-w8jl.vercel.app/',
+    imageUrl: 'images/lure.png'
   },
   {
     id: 'two',
