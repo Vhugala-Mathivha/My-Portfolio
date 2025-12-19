@@ -21,7 +21,7 @@ const projects: Project[] = [
     id: 'portfolio',
     title: 'PURE BEAUTY',
     category: 'E-COMMERCE',
-    url: '#home',
+    url: 'https://pure-beauty-five.vercel.app/',
     imageUrl: 'images/pure.png',
   },
   {
