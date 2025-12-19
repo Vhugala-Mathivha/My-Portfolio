@@ -19,10 +19,10 @@ const projects: Project[] = [
   },
   {
     id: 'portfolio',
-    title: 'Vhugala Portfolio',
-    category: 'PORTFOLIO',
+    title: 'PURE BEAUTY',
+    category: 'E-COMMERCE',
     url: '#home',
-    imageUrl: 'images/Gemini_Generated_Image_ihtg7gihtg7gihtg.png',
+    imageUrl: 'images/pure.png',
   },
   {
     id: 'vose',
